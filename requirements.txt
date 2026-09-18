@@ -1,0 +1,15 @@
+# Core dependencies for GeoMapComp
+pyspark>=3.3.0
+numpy>=1.23.0
+pandas>=1.5.0
+scipy>=1.9.0
+pygeohash>=1.2.0
+GDAL>=3.4.0
+matplotlib>=3.5.0
+
+# NOTE on GDAL:
+# The `GDAL` Python package must match the GDAL library installed on your
+# system. If `pip install GDAL` fails, install the system library first, e.g.:
+#   Ubuntu/Debian:  sudo apt-get install gdal-bin libgdal-dev
+#                   pip install GDAL==$(gdal-config --version)
+#   conda:          conda install -c conda-forge gdal
