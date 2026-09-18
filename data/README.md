@@ -1,7 +1,7 @@
 # Data
 
 This directory holds the raster inputs. The actual `.tiff` files are not
-committed to the repository because they are large.
+committed to the repository because they are too large (the data is publicly available anyhow).
 
 Typical layout:
 
