@@ -15,10 +15,10 @@ Remote-sensing products frequently produce region-based geo-maps (choropleth map
 
 GeoMapComp addresses this with a distributed pipeline on Apache Spark:
 
-1. **Vectorization** — each raster is read band-by-band with GDAL and flattened into a tidy table of `(latitude, longitude, value)` rows.
-2. **Geohash encoding** — coordinates are discretized into fixed-size geohash cells, giving spatial proxies that make two maps directly comparable cell-by-cell.
-3. **Statistical comparison** — aligned maps are scored with a similarity metric: Root Mean Squared Error (RMSE), Mean Absolute Percentage Error (MAPE), Jensen–Shannon Divergence (JSD), or Kullback–Leibler Divergence (KLD).
-4. **Distributed search** — candidate sample rasters are partitioned across Spark workers; each worker keeps its best-matching sample, and the driver reduces those to the single overall best match.
+1. **Vectorization**: each raster is read band-by-band with GDAL and flattened into a tidy table of `(latitude, longitude, value)` rows.
+2. **Geohash encoding**: coordinates are discretized into fixed-size geohash cells, giving spatial proxies that make two maps directly comparable cell-by-cell.
+3. **Statistical comparison**: aligned maps are scored with a similarity metric: Root Mean Squared Error (RMSE), Mean Absolute Percentage Error (MAPE), Jensen–Shannon Divergence (JSD), or Kullback–Leibler Divergence (KLD).
+4. **Distributed search**: candidate sample rasters are partitioned across Spark workers; each worker keeps its best-matching sample, and the driver reduces those to the single overall best match.
 
 For every metric, **lower is better**, so the search minimizes.
 
@@ -137,7 +137,7 @@ Running the search over the New York City air-quality samples with three workers
 
 ## Citing
 
-If you use this code, please cite the paper — see [`CITATION.cff`](CITATION.cff) or use the BibTeX entry below:
+If you use this code, please cite the paper. See [`CITATION.cff`](CITATION.cff) or use the BibTeX entry below:
 
 ```bibtex
 @inproceedings{alsalama2025geomapcomp,
