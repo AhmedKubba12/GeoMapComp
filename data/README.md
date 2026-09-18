@@ -1,11 +1,9 @@
 # Data
 
-This directory holds the raster inputs. The actual `.tiff` files are **not**
-committed to the repository (they are git-ignored because they are large); add
-them here yourself, or point the code at another location with the
-`--reference-path` / `--samples-path` arguments.
+This directory holds the raster inputs. The actual `.tiff` files are not
+committed to the repository because they are large.
 
-Expected layout:
+Typical layout:
 
 ```
 data/
